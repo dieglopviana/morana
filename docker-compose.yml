@@ -1,0 +1,21 @@
+version: "3.5"
+services:
+    php:
+        build: ./docker/php
+        container_name: phpmorana
+        ports:
+            - "8056:80"
+            - "443:443"
+        volumes:
+            - ./src:/var/www/html
+
+    db:
+        image: mysql:5.7
+        container_name: bdmorana
+        ports:
+            - "3306:3306"
+        volumes:
+            - ./docker/mysql/data:/var/lib/mysql
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=morana
