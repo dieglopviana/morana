@@ -2,7 +2,7 @@
 
 Para rodar esta aplicação, será necessário ter o docker instalado na máquina, com isso, siga as instruções abaixo:
 
-Após a clonagem do respositório, na raiz do projeto, rodar o camando
+Após a clonagem do respositório, crie as pastas "/docker/mysql/data" e na raiz do projeto, rodar o camando
 
 > ```docker-compose up -d --build```
 
